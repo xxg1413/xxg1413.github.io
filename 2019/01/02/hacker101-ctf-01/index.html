@@ -10,13 +10,13 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate">
     <meta name="keywords" content="寻找自我,"> 
-    <meta name="description" content="The quieter you become, the more you can hear.,第01题  Micro-CMS v1难度：Easy分类：Web
+    <meta name="description" content="The quieter you become, the more you can hear.,01.Micro-CMS v1难度：Easy分类：Web
 需要拿到4个flag
 题解打开网址，可以看到3个不同的链接，应该是对应三个不同的flag
 
 Testing先从Testing开始
 
-看,"> 
+看到了E,"> 
     <meta name="author" content="寻找自我"> 
     <link rel="alternative" href="atom.xml" title="Jimmy&#39;s Blog" type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon.png"> 
@@ -68,12 +68,12 @@ Testing先从Testing开始
 
         </div>
         <div class="content markdown">
-            <h2 id="第01题-Micro-CMS-v1"><a href="#第01题-Micro-CMS-v1" class="headerlink" title="第01题  Micro-CMS v1"></a>第01题  Micro-CMS v1</h2><p>难度：Easy<br>分类：Web</p>
+            <h2 id="01-Micro-CMS-v1"><a href="#01-Micro-CMS-v1" class="headerlink" title="01.Micro-CMS v1"></a>01.Micro-CMS v1</h2><p>难度：Easy<br>分类：Web</p>
 <p>需要拿到4个flag</p>
 <h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><p>打开网址，可以看到3个不同的链接，应该是对应三个不同的flag</p>
 <p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g8dr8z366rj30na08wgmc.jpg" alt></p>
 <h4 id="Testing"><a href="#Testing" class="headerlink" title="Testing"></a>Testing</h4><p>先从Testing开始</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g8dr8zvdv5j30s60fcjsm.jpg" alt="af1b3974fa12368f9bb6e9a00c32c8b8.png"></p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g8dr8zvdv5j30s60fcjsm.jpg" alt></p>
 <p>看到了<code>Edit this page</code>，打开这个链接</p>
 <p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g8dr90afrzj30l00egdgp.jpg" alt></p>
 <p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g8dr90tdjkj30ug0ludhm.jpg" alt></p>
@@ -90,39 +90,28 @@ Testing先从Testing开始
 <p>可以看到，测试用例没有任何处理，直接存储了。</p>
 <h4 id="Markdown-Test"><a href="#Markdown-Test" class="headerlink" title="Markdown Test"></a>Markdown Test</h4><p>我们进入第二个链接，<code>Markdown Test</code></p>
 <p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g8dr93cl3qj30me0eugmn.jpg" alt></p>
-<p>看起来是要进行编辑框的test，还是进入<code>Edit this page</code></p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g8dr93ps8lj30um0kq40l.jpg" alt></p>
-<p>因为Title我们测试过，这一轮的title写着Markdown test，那就测试markdown编辑框。</p>
-<p>还是先用最标准的测试用例，然后<code>save</code></p>
+<p>看起来是要进行编辑框的test，还是进入<code>Edit this page</code><br><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g8dr93ps8lj30um0kq40l.jpg" alt></p>
+<p>因为Title我们测试过，这一轮的title写着Markdown test，那就测试markdown编辑框。<br>还是先用最标准的测试用例，然后<code>save</code></p>
 <p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g8dr944cldj30ua0k675q.jpg" alt></p>
-<p>得到结果后，查看源码</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g8dr959upfj30x20r8jvr.jpg" alt></p>
-<p>发现过滤了<code>&lt;script&gt;</code>标签，那么换其他测试用例试试。</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g8dr95zeqsj30u40ieq49.jpg" alt></p>
-<p>查看结果，拿到了第二个FLAG</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g8dr96ebmyj31pe0g8mz9.jpg" alt></p>
-<p>源码</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g8dr971if8j313m0u0wkn.jpg" alt></p>
+<p>得到结果后，查看源码<br><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g8dr959upfj30x20r8jvr.jpg" alt></p>
+<p>发现过滤了<code>&lt;script&gt;</code>标签，那么换其他测试用例试试。<br><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g8dr95zeqsj30u40ieq49.jpg" alt></p>
+<p>查看结果，拿到了第二个FLAG<br><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g8dr96ebmyj31pe0g8mz9.jpg" alt></p>
+<p>源码<br><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g8dr971if8j313m0u0wkn.jpg" alt></p>
 <h4 id="Create-a-new-page"><a href="#Create-a-new-page" class="headerlink" title="Create a new page"></a>Create a new page</h4><p>打开链接并随意填充数据提交</p>
 <p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g8dr97wzbqj30va0meq4j.jpg" alt></p>
 <p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g8dr98qg3hj30zm0mkdhi.jpg" alt></p>
 <p>观察界面，数据没什么问题，倒是观察到<code>page/id</code> 出现了<code>page/12</code><br><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g8dr99725hj30sm0d80tl.jpg" alt></p>
-<p>返回主界面，查看其它的<code>url</code></p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g8dr99x5vuj30vi0q4afx.jpg" alt>发现是<code>1</code>和<code>2</code>，这<code>12</code>是怎么来的。刚才创建了一次页面，不应该是<code>3</code>么，难道是<code>1</code>和<code>2</code>的拼接?</p>
-<p>先尝试第一种想法，有其他的url存在，我们尝试访问<code>page/3</code>到<code>page/12</code>。</p>
-<p>尝试到<code>page/7</code>时返回<code>403</code>错误，说明有隐藏页面，那怎么才能有权限访问呢 </p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g8dr9alz91j31g80detak.jpg" alt></p>
+<p>返回主界面，查看其它的<code>url</code><br><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g8dr99x5vuj30vi0q4afx.jpg" alt></p>
+<p>发现是<code>1</code>和<code>2</code>，这<code>12</code>是怎么来的。刚才创建了一次页面，不应该是<code>3</code>么，难道是<code>1</code>和<code>2</code>的拼接?<br>先尝试第一种想法，有其他的url存在，我们尝试访问<code>page/3</code>到<code>page/12</code>。</p>
+<p>尝试到<code>page/7</code>时返回<code>403</code>错误，说明有隐藏页面，那怎么才能有权限访问呢<br><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g8dr9alz91j31g80detak.jpg" alt></p>
 <p>我们返回去查看单独的页面URL，发现一个页面除了自己的<code>page/id</code>，还有一个编辑页面 <code>page/edit/id</code>，那我们尝试访问<code>page/7</code>的编辑页面。</p>
 <p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g8dr9b3r56j30xu0ncgno.jpg" alt></p>
 <p>访问成功，得到第三个FLAG</p>
 <h4 id="Edit-Page"><a href="#Edit-Page" class="headerlink" title="Edit Page"></a>Edit Page</h4><p>按照一个单项一个FLAG的标准，主界面的三个FLAG已经全部找到。最后一个FLAG得换一种思路.</p>
-<p>刚才注意了编辑页面的URL，是否有SQL注入,在URL最后加入<code>&#39;</code>，试试效果</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g8dr9br2a7j30yy0m2q4n.jpg" alt></p>
-<p>结果</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g8dr9ckwiqj314y09qwfh.jpg" alt></p>
+<p>刚才注意了编辑页面的URL，是否有SQL注入,在URL最后加入<code>&#39;</code>，试试效果<br><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g8dr9br2a7j30yy0m2q4n.jpg" alt></p>
+<p>结果<br><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g8dr9ckwiqj314y09qwfh.jpg" alt></p>
 <p>拿到了第四个FLAG</p>
-<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>Micro-CMS v1主要是最基础的XSS和SQL注入，很多题的方法很多，比如第二个FLAG可以有多种输入，只要不是被过滤的，都可以成功。</p>
-<p>下图改变<code>button</code>的事件，也可以触发。</p>
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>Micro-CMS v1主要是最基础的XSS和SQL注入，很多题的方法很多，比如第二个FLAG可以有多种输入，只要不是被过滤的，都可以成功。<br>下图改变<code>button</code>的事件，也可以触发。</p>
 <p>增加onclick事件<br><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g8dr9cznc5j30tc0l8ac8.jpg" alt></p>
 <p>触发成功<br><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g8dr9dm3waj31310u0dlc.jpg" alt></p>
 <h4 id="目前进度"><a href="#目前进度" class="headerlink" title="目前进度"></a>目前进度</h4><p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g8dr9dv1ygj30rn05cwex.jpg" alt></p>
