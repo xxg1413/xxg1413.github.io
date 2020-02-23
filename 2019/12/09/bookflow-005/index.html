@@ -5,18 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>01.Micro-CMS v1 - Jimmy&#39;s Blog</title>
+    <title>005.清醒思考的艺术 - Jimmy&#39;s Blog</title>
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate">
     <meta name="keywords" content="寻找自我,"> 
-    <meta name="description" content="The quieter you become, the more you can hear.,01.Micro-CMS v1难度：Easy分类：Web
-需要拿到4个flag
-题解打开网址，可以看到3个不同的链接，应该是对应三个不同的flag
-
-Testing先从Testing开始
-
-看到了E,"> 
+    <meta name="description" content="The quieter you become, the more you can hear.,
+清醒思考的艺术以前日本有个调查，问调查者十年后的自己会是什么样的，这个社会会是什么样的？超过70%的被采访者认为十年后的自己会比现在好，同时不到30%的被采访者认为十年后的社会会比现在更好。
+如果,"> 
     <meta name="author" content="P小二"> 
     <link rel="alternative" href="atom.xml" title="Jimmy&#39;s Blog" type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon.png"> 
@@ -41,7 +37,7 @@ Testing先从Testing开始
     <div class="bar" style="width: 0;"></div>
     <a class="icon-home image-icon" href="javascript:;" data-url="http://xiangxiaogang.com"></a>
     <div title="播放/暂停" class="icon-play"></div>
-    <h3 class="subtitle">01.Micro-CMS v1</h3>
+    <h3 class="subtitle">005.清醒思考的艺术</h3>
     <div class="social">
         <!--<div class="like-icon">-->
             <!--<a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
@@ -59,62 +55,34 @@ Testing先从Testing开始
     <div class="section">
         <div class="article">
     <div class="main">
-        <h1 class="title">01.Micro-CMS v1</h1>
+        <h1 class="title">005.清醒思考的艺术</h1>
         <div class="stuff">
-            <span>一月 02, 2019</span>
+            <span>十二月 09, 2019</span>
             
-  <ul class="post-tags-list"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/ctf/">ctf</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/hacker101/">hacker101</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/writeup/">writeup</a></li></ul>
+  <ul class="post-tags-list"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/bookflow/">bookflow</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/一周一书专栏/">一周一书专栏</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/读书笔记/">读书笔记</a></li></ul>
 
 
         </div>
         <div class="content markdown">
-            <h2 id="01-Micro-CMS-v1"><a href="#01-Micro-CMS-v1" class="headerlink" title="01.Micro-CMS v1"></a>01.Micro-CMS v1</h2><p>难度：Easy<br>分类：Web</p>
-<p>需要拿到4个flag</p>
-<h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><p>打开网址，可以看到3个不同的链接，应该是对应三个不同的flag</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g8dr8z366rj30na08wgmc.jpg" alt></p>
-<h4 id="Testing"><a href="#Testing" class="headerlink" title="Testing"></a>Testing</h4><p>先从Testing开始</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g8dr8zvdv5j30s60fcjsm.jpg" alt></p>
-<p>看到了<code>Edit this page</code>，打开这个链接</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g8dr90afrzj30l00egdgp.jpg" alt></p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g8dr90tdjkj30ug0ludhm.jpg" alt></p>
-<p>可以看到有两个输入框，先测试<code>Title</code></p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g8dr919skqj30rs0h3myb.jpg" alt></p>
-<p>输入标注的XSS测试用例，点击<code>save</code></p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g8dr91vns8j30u00uhn2h.jpg" alt></p>
-<p>返回的页面，我们查看刚才的输入用例，是以h1标签包围了起来。但是发现浏览器的标题没有做任何处理，全部展示了出来。</p>
-<p>怎么触发这个XSS呢？ 我们点击 <code>&lt;-- Go Home</code>返回首页</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g8dr92bqa9j30v80c6mz2.jpg" alt></p>
-<p>触发了XSS，得到了第一个FLAG。</p>
-<p>我们来看看源码变成了什么样子</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g8dr92vkk0j30x40swjwv.jpg" alt></p>
-<p>可以看到，测试用例没有任何处理，直接存储了。</p>
-<h4 id="Markdown-Test"><a href="#Markdown-Test" class="headerlink" title="Markdown Test"></a>Markdown Test</h4><p>我们进入第二个链接，<code>Markdown Test</code></p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g8dr93cl3qj30me0eugmn.jpg" alt></p>
-<p>看起来是要进行编辑框的test，还是进入<code>Edit this page</code><br><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g8dr93ps8lj30um0kq40l.jpg" alt></p>
-<p>因为Title我们测试过，这一轮的title写着Markdown test，那就测试markdown编辑框。<br>还是先用最标准的测试用例，然后<code>save</code></p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g8dr944cldj30ua0k675q.jpg" alt></p>
-<p>得到结果后，查看源码<br><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g8dr959upfj30x20r8jvr.jpg" alt></p>
-<p>发现过滤了<code>&lt;script&gt;</code>标签，那么换其他测试用例试试。<br><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g8dr95zeqsj30u40ieq49.jpg" alt></p>
-<p>查看结果，拿到了第二个FLAG<br><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g8dr96ebmyj31pe0g8mz9.jpg" alt></p>
-<p>源码<br><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g8dr971if8j313m0u0wkn.jpg" alt></p>
-<h4 id="Create-a-new-page"><a href="#Create-a-new-page" class="headerlink" title="Create a new page"></a>Create a new page</h4><p>打开链接并随意填充数据提交</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g8dr97wzbqj30va0meq4j.jpg" alt></p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g8dr98qg3hj30zm0mkdhi.jpg" alt></p>
-<p>观察界面，数据没什么问题，倒是观察到<code>page/id</code> 出现了<code>page/12</code><br><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g8dr99725hj30sm0d80tl.jpg" alt></p>
-<p>返回主界面，查看其它的<code>url</code><br><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g8dr99x5vuj30vi0q4afx.jpg" alt></p>
-<p>发现是<code>1</code>和<code>2</code>，这<code>12</code>是怎么来的。刚才创建了一次页面，不应该是<code>3</code>么，难道是<code>1</code>和<code>2</code>的拼接?<br>先尝试第一种想法，有其他的url存在，我们尝试访问<code>page/3</code>到<code>page/12</code>。</p>
-<p>尝试到<code>page/7</code>时返回<code>403</code>错误，说明有隐藏页面，那怎么才能有权限访问呢<br><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g8dr9alz91j31g80detak.jpg" alt></p>
-<p>我们返回去查看单独的页面URL，发现一个页面除了自己的<code>page/id</code>，还有一个编辑页面 <code>page/edit/id</code>，那我们尝试访问<code>page/7</code>的编辑页面。</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g8dr9b3r56j30xu0ncgno.jpg" alt></p>
-<p>访问成功，得到第三个FLAG</p>
-<h4 id="Edit-Page"><a href="#Edit-Page" class="headerlink" title="Edit Page"></a>Edit Page</h4><p>按照一个单项一个FLAG的标准，主界面的三个FLAG已经全部找到。最后一个FLAG得换一种思路.</p>
-<p>刚才注意了编辑页面的URL，是否有SQL注入,在URL最后加入<code>&#39;</code>，试试效果<br><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g8dr9br2a7j30yy0m2q4n.jpg" alt></p>
-<p>结果<br><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g8dr9ckwiqj314y09qwfh.jpg" alt></p>
-<p>拿到了第四个FLAG</p>
-<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>Micro-CMS v1主要是最基础的XSS和SQL注入，很多题的方法很多，比如第二个FLAG可以有多种输入，只要不是被过滤的，都可以成功。<br>下图改变<code>button</code>的事件，也可以触发。</p>
-<p>增加onclick事件<br><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g8dr9cznc5j30tc0l8ac8.jpg" alt></p>
-<p>触发成功<br><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g8dr9dm3waj31310u0dlc.jpg" alt></p>
-<h4 id="目前进度"><a href="#目前进度" class="headerlink" title="目前进度"></a>目前进度</h4><p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g8dr9dv1ygj30rn05cwex.jpg" alt></p>
+            <p><img src="https://tva1.sinaimg.cn/large/006tNbRwly1g9qs1fswc0j30u0140ju3.jpg" alt></p>
+<h4 id="清醒思考的艺术"><a href="#清醒思考的艺术" class="headerlink" title="清醒思考的艺术"></a>清醒思考的艺术</h4><p>以前日本有个调查，问调查者十年后的自己会是什么样的，这个社会会是什么样的？超过70%的被采访者认为十年后的自己会比现在好，同时不到30%的被采访者认为十年后的社会会比现在更好。</p>
+<p>如果在几年前问你同样的问题，你是否看好中国和自己的前途，如果时间节点来到现在，你的答案又是什么。个人的发展期望和社会发展是什么关系，经济是如何影响个人的发展的呢？房价涨了十年，还会继续涨么？连涨五年的融资规模，2019年直接变成五分之一，这又是为什么？你是怎么看待这些问题的。</p>
+<p>清醒思考的艺术，教你不要再犯的52种思维错误。</p>
+<h4 id="观点"><a href="#观点" class="headerlink" title="观点"></a>观点</h4><p>我们生活中存在非常多的思维错误，经常被人提到的如：沉没成本，从众心理，对比效应，指数增长等等。</p>
+<p>怎么样看待xx问题，实际上也反应了人对于这件事的情感投射。</p>
+<p>我妈听到别人因为xx仪器，xx药，xx方法治好了病的传言，就想去买，就想去实践，其实是现成偏误。有的人抽烟，喝酒还活了一百岁，就认为抽烟喝酒不是个事，这也是现成偏误。</p>
+<p>我买股票，跌了舍不得卖，总认为还会涨回去，买超跌股，以为可以涨回最高点，也不想想影响后市的只有这只股当下是否值这么多钱。</p>
+<p>总可惜自己13年拿了那么多比特币缺钱卖出了，实际上我才没有定力可以拿五年时间，能有30个点的利润，我早就跑了。</p>
+<p>很多人以为自己只是懒，不读书，不健身，其实很多人已经失去了坚持做这件事情的能力了，比如长时间阅读的能力。</p>
+<p>人称之为人，是因为人有共情能力，有想象能力，是感性和理性的结合体，这也带来了一些问题。在某个事情上，人想的是情感，做的是事实。如果一件事情感情放得越多，产生的偏差会越大。</p>
+<p>书中有个例子，A是“国王死了，王后也死了”，B是“国王死了，王后伤心欲绝，也死了”，问两个故事哪个概率大一些，几乎所有人都选择B。但事实上A的概率比B的概率大，因为A中的王后可能很开心，可能无所谓，也可能伤心欲绝。而B显然只是A的一个子集。我们直觉认为B的概率大一些只是因为B更符合人类情感。</p>
+<p>感情用事是人的本能，而且是可能毁掉自己的本能。如果你被情绪包围时，你需要保持深吸一口气，保持冷静，理性思考问题。</p>
+<p>人总是系统性的高估自己的能力，颜值和素质，并且低估自己承担风险的能力。人总是用自己熟悉的方式来思考问题，这样很容易出现偏误。只有靠做才能检验自己的想法。知易行难，做的过程，本身就是修正自己想法的重要步骤。做的好，总结自己为什么做的好；做的差，想想为什么其他人做的好。</p>
+<p>至于如何避免犯更少的错，避免这些思维陷阱，书中的解决方案就是多和你想法不一样的人交流，团队行动。</p>
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><ul>
+<li>推荐理由: 生动形象的列出人们常犯的思维错误，能让人远离思维陷阱，改变思维方式，犯更少的错，从而离成功更近。</li>
+<li>总体打分: 四星（值得一读）</li>
+</ul>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
